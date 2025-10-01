@@ -27,4 +27,18 @@ def commentator():
     user_input = input(f"With B: {B_dict['name']}, {B_dict['description']}, {B_dict['country']}:  ").lower()
 
 commentator()
-print(user_input)
+print(A_dict['follower_count'])
+print(B_dict['follower_count'])
+
+answer = ""
+def answer_checker():
+    global answer
+    if A_dict['follower_count'] > B_dict['follower_count']:
+        answer = A_dict['follower_count']
+    elif A_dict['follower_count'] < B_dict['follower_count']:
+        answer = B_dict['follower_count']
+    print(answer)
+    return answer
+    
+answer_checker()
+print(answer)
