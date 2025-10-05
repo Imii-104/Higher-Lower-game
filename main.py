@@ -72,12 +72,12 @@ def answer_declarer():
         return
 
     if dict_map.get(user_input) == answer:
-        print(f"You are correct! {answer['name']} is the correct answer.")
+        print(f"Correct! {answer['name']} has more followers.")
         score += 1
         print(f"Current score: {score}")
         
     else:
-        print(f"You have made an invalid choice! \nFinal score: {score}")
+        print(f"Oops! That's wrong.\nFinal score: {score}")
         game_over = True
              
     return score
